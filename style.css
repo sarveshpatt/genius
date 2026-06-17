@@ -89,6 +89,7 @@ body {
   display: inline-block;
   position: relative;
   top: 3px;
+  left: -1px;
 }
 
 .footer-logo .logo-tie {
