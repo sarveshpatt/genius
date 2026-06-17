@@ -662,6 +662,15 @@ body {
   gap: 24px;
 }
 
+.info-row {
+  display: flex;
+  gap: 24px;
+}
+
+.info-row .info-item {
+  flex: 1;
+}
+
 .info-item strong {
   display: block;
   margin-bottom: 6px;
