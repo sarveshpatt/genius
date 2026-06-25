@@ -256,11 +256,12 @@
       <span class="section-label reveal-up">Get In Touch</span>
       <h2 class="section-title reveal-up">Book an Appointment</h2>
       <div class="contact-grid">
-        <form class="contact-form reveal-up" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <input type="tel" name="phone" placeholder="Phone Number">
-          <select name="service" required>
+        <form class="contact-form reveal-up" id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfIVVkfqSoMeKATOTTWWipJx35JQJn7FkP3yS9oLu-nltzlPw/formResponse" method="POST" target="hidden_iframe">
+          <input type="hidden" name="fvv" value="1">
+          <input type="text" name="entry.1433383299" placeholder="Your Name" required>
+          <input type="email" name="entry.676499536" placeholder="Your Email" required>
+          <input type="tel" name="entry.953098344" placeholder="Phone Number">
+          <select name="entry.1559884201" required>
             <option value="" disabled selected>Select Service</option>
             <option>Uniform Services</option>
             <option>Formal Wear</option>
@@ -269,9 +270,10 @@
             <option>Button Hole & Stitching</option>
             <option>Other</option>
           </select>
-          <textarea name="message" rows="4" placeholder="Tell us what you need..." required></textarea>
+          <textarea name="entry.260357374" rows="4" placeholder="Tell us what you need..." required></textarea>
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
         <div class="contact-info reveal-up">
           <div class="info-item">
             <strong>📍 Address</strong>
