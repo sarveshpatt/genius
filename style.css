@@ -516,6 +516,14 @@ body {
   border-radius: 16px;
 }
 
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
 /* Values */
 .values-grid {
   display: grid;

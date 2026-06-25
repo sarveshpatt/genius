@@ -12,16 +12,34 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
   const btn = this.querySelector('.btn');
   const original = btn.textContent;
-  btn.textContent = 'Message Sent!';
-  btn.style.background = '#D61F26';
-  this.reset();
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  try {
+    const res = await fetch(this.action, {
+      method: this.method,
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      btn.textContent = 'Message Sent!';
+      btn.style.background = '#25d366';
+      this.reset();
+    } else {
+      btn.textContent = 'Failed to send. Try again.';
+      btn.style.background = '#D61F26';
+    }
+  } catch {
+    btn.textContent = 'Failed to send. Try again.';
+    btn.style.background = '#D61F26';
+  }
   setTimeout(() => {
     btn.textContent = original;
     btn.style.background = '';
+    btn.disabled = false;
   }, 3000);
 });
 

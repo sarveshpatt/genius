@@ -151,10 +151,10 @@
       <h2 class="section-title reveal-up">Portfolio</h2>
       <div class="grid-3">
         <div class="gallery-item reveal-up">
-          <div class="gallery-placeholder">Suit 1</div>
+          <img src="images/blue-shirt.png" alt="Blue shirt tailored at Genius Designer" class="gallery-img">
         </div>
         <div class="gallery-item reveal-up">
-          <div class="gallery-placeholder">Suit 2</div>
+          <img src="images/formatpantsfolded.png" alt="Formal pants tailored at Genius Designer" class="gallery-img">
         </div>
         <div class="gallery-item reveal-up">
           <div class="gallery-placeholder">Suit 3</div>
@@ -256,11 +256,11 @@
       <span class="section-label reveal-up">Get In Touch</span>
       <h2 class="section-title reveal-up">Book an Appointment</h2>
       <div class="contact-grid">
-        <form class="contact-form reveal-up" id="contactForm">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <input type="tel" placeholder="Phone Number">
-          <select required>
+        <form class="contact-form reveal-up" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="tel" name="phone" placeholder="Phone Number">
+          <select name="service" required>
             <option value="" disabled selected>Select Service</option>
             <option>Uniform Services</option>
             <option>Formal Wear</option>
@@ -269,7 +269,7 @@
             <option>Button Hole & Stitching</option>
             <option>Other</option>
           </select>
-          <textarea rows="4" placeholder="Tell us what you need..." required></textarea>
+          <textarea name="message" rows="4" placeholder="Tell us what you need..." required></textarea>
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
         <div class="contact-info reveal-up">
